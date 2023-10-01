@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# macOS generated files
+.DS_Store
+
+# Windows generated files
+Thumbs.db
+
+# VS Code generated files
+.vscode
