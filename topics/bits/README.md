@@ -123,16 +123,15 @@ __builtin_popcount(x);
 ```
 
 arr: todos los números se repiten una vez (se presentan por pares) menos uno, ¿Cuál es el número que no se presenta en pares?
-e.g. arr = [1,2,4,3,1,3,2…], r = 4, n = arr.len, n<10^8
+
+Por ejemplo: arr = [1,2,4,3,1,3,2…], r = 4, n = arr.len, n<10^8
 Posibles soluciones:
 
-búsqueda binaria y ordenamiento O(nlogn+logn), O(n)
+cubetas (buckets) -> O(n), O(n)
 
-xor O(n), O(1)
+map/set -> O(n), O(n)
 
-cubetas O(n), O(n)
-
-mapa O(nlogn), O(n)
+xor -> O(n), O(1)
 
 ```C++
 int findUnique(int arr[], int n) {
@@ -152,13 +151,13 @@ __builtin_popcount(x);
 
 https://codeforces.com/problemset/gymProblem/102697/035
 
-Pseudocode:
-
-ans = 1
-
+```C++
+int ans = 1;
+int i;
 for (i = 1; i <= n; i++)
-
-ans += (a[i-1] ^ a[i]) != 0
+    ans += (a[i-1] ^ a[i]) != 0
+return ans;
+```
 
 ## Bitmasks
 
@@ -229,6 +228,7 @@ cout << bs.count();
 ```
 
 https://codeforces.com/problemset/gymProblem/102697/035
+
 bitset como cubeta
 
 ```C++
