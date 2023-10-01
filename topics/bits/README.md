@@ -27,6 +27,10 @@ En el sistemas de numeración se utilizan para representar ideas como una abstra
 
 Todo en el cómputo clásico es representado con bits, incluidas las variables. Por ejemplo, con número sin signo de n bits {bbb...bbb} existen 2^n posibles representaciones. Por lo tanto, el rango de representación es [0, 2^n - 1]. Una convención para los números con signo de n bits es tomar un bit para representar el signo y los n - 1 bits restantes para representar el valor absoluto {sbbb...bbb}. Por lo tanto, el rango de representación es [-2^(n-1), 2^(n-1) - 1]. Se representan en complemento a dos, que suma un bit al complemento a uno, que es la negación lógica de los bits. Así, es posible cumplir con la propiedad del inverso aditivo.
 
+[Ejemplo de desbordamiento](vars.cpp)
+
+[Ejemplo de números negativos](negatives.cpp)
+
 ## Operaciones y Aplicaciones
 
 ### Operaciones con representaciones binarias
@@ -60,6 +64,8 @@ x - 1: Se niegan los bits de x desde el LSB hasta el primer bit encendido de der
 x & 1: Se obtiene el LSB de x, y como este es el único que puede no ser divisible por dos, equivale a x % 2.
 
 x >> 1: Se obtiene x / 2, pero si x es impar, se obtiene el resultado truncado hacia abajo.
+
+[Ejemplo de operaciones](ops.cpp)
 
 ### Aplicaciones
 
@@ -145,19 +151,11 @@ int findUnique(int arr[], int n) {
 
 https://codeforces.com/problemset/problem/579/A
 
-```C++
-__builtin_popcount(x);
-```
+[Solution](raisingBacteria.cpp)
 
 https://codeforces.com/problemset/gymProblem/102697/035
 
-```C++
-int ans = 1;
-int i;
-for (i = 1; i <= n; i++)
-    ans += (a[i-1] ^ a[i]) != 0
-return ans;
-```
+[Solution](distinctNumbers.cpp)
 
 ## Bitmasks
 
